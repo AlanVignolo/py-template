@@ -1,0 +1,2 @@
+* text=auto # normaliza finales de línea a LF dentro del repo*.sh text eol=lf # los scripts SIEMPRE con LF (si no, bash falla en Linux)
+*.csv diff=csv*.ipynb -diff # no intentes hacer diff de notebooks*.pt filter=lfs diff=lfs merge=lfs -text # esto lo escribe git lfs track
