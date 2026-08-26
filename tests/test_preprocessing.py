@@ -1,6 +1,6 @@
+import cv2
 import numpy as np
 import pytest
-import cv2
 
 from py_template.preprocessing import preprocess
 
