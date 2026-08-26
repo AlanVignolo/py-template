@@ -1,4 +1,5 @@
 import logging
+
 from py_template.validacion import parsear_valor
 
 logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")

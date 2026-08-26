@@ -1,5 +1,7 @@
 import pytest
+
 from py_template.predictor import LinearPredictor
+
 
 @pytest.fixture
 def linear_model():
