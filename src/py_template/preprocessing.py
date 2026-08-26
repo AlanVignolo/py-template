@@ -1,7 +1,10 @@
 import numpy as np
+from numpy.typing import NDArray
 
 
-def preprocess(image: np.ndarray, size: tuple[int, int] = (224, 224)) -> np.ndarray:
+def preprocess(
+    image: NDArray[np.uint8], size: tuple[int, int] = (224, 224)
+) -> NDArray[np.float32]:
     import cv2
 
     resized = cv2.resize(image, size)
