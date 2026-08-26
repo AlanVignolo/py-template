@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     
     data_dir: Path = Path("data")
     batch_size: int = 32
-    api_key: str
+    api_key: str | None = None
     debug: bool = False
 
 settings = Settings()
