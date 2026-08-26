@@ -21,7 +21,7 @@ jobs:
           enable-cache: true
       
       - name: Install dependencies
-        run: run: uv sync --all-groups --locked
+        run: uv sync --all-groups --locked
  # --all-groups instala dependencias dev tambien
       
       - name: Lint
