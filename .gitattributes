@@ -1,2 +1,14 @@
-* text=auto # normaliza finales de línea a LF dentro del repo*.sh text eol=lf # los scripts SIEMPRE con LF (si no, bash falla en Linux)
-*.csv diff=csv*.ipynb -diff # no intentes hacer diff de notebooks*.pt filter=lfs diff=lfs merge=lfs -text # esto lo escribe git lfs track
+# Normaliza los finales de línea: en el repositorio, siempre LF.
+* text=auto
+
+# Los scripts SIEMPRE con LF; con CRLF bash falla en Linux.
+*.sh text eol=lf
+
+# Los notebooks no se diffean: son JSON con las salidas embebidas.
+*.ipynb -diff
+
+# Diff de CSV por columnas (requiere definir el driver 'csv' en la config).
+*.csv diff=csv
+
+# Pesos de modelos por Git LFS (esta línea la escribe `git lfs track`).
+*.pt filter=lfs diff=lfs merge=lfs -text
